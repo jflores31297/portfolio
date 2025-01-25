@@ -1,7 +1,3 @@
----
-classes: wide
----
-
 ![Project Cover Image](https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true)
 
 ---
