@@ -1,6 +1,4 @@
-<div>
-<img src=https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true width="900">
-</div>
+![Project Cover Image](assets/Project Cover Image.png)
 
 ---
 ### Building an Optimal Investment Portfolio Using Modern Portfolio Theory
@@ -581,7 +579,7 @@ plt.show()
 
 
     
-![png](output_27_0.png)
+![png](assets/output_27_0.png)
     
 
 
@@ -1191,7 +1189,7 @@ plt.show()
 
 
     
-![png](output_71_0.png)
+![png](assets/output_71_0.png)
     
 
 
