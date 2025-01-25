@@ -5,5 +5,4 @@ plugins:
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 header:
-  image: "https://github.com/jflores31297/portfolio/blob/dbf35951f66c2a73745f8497122e58cf70e4c489/assets/dominique-muller-tVOKqNrLJBs-unsplash.jpeg"
-
+  image: "https://github.com/jflores31297/portfolio/blob/main/assets/dominique-muller-tVOKqNrLJBs-unsplash.jpeg?raw=true"
