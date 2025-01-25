@@ -1,0 +1,16 @@
+# Site Author
+author:
+  name: "Juan Flores"
+  avatar: "https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true"
+  bio: "Data Scientist"
+  location: "Dallas, TX"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: "mailto:your.name@email.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
