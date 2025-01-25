@@ -6,10 +6,22 @@ remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 header:
   image: "https://github.com/jflores31297/portfolio/blob/main/assets/dominique-muller-tVOKqNrLJBs-unsplash.jpeg?raw=true"
-sidebar:
-  - title: "Juan Flores"
-    image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
-    text: "Data Scientist"
+# Site Author
+author:
+  name: "Juan Flores"
+  avatar: "https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true"
+  bio: "Data Scientist"
+  location: "Dallas, TX"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      # url: "mailto:your.name@email.com"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      # url: "https://github.com/"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      # url: "https://instagram.com/"
 include: ["_pages"]
 defaults:
   # _pages
