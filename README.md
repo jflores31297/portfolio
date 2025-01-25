@@ -1,8 +1,6 @@
 # Hi! My name is Juan, and I am passionate about turning complex data into actionable insights. I specialize in business analytics and data visualization. Check out some of my latest work below.
 ---
 ## Projects
-<div>
-<img src=https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true width="900">
-</div>
-[**Investment Portfolio Management with Python**](https://github.com/jflores31297/portfolio/blob/e275cd3eea6f5dd0e30885260081f1940e2bac15/PortfolioTheory.ipynb)
+![Project Cover Image](https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true)
+[**Investment Portfolio Management with Python**](https://github.com/jflores31297/portfolio/blob/cf94ffe534556b9b87bcb83a757ec9f34ce7ec07/_pages/PortfolioTheory.html)
 This project aims to optimize investment portfolios using Python by applying Modern Portfolio Theory (MPT) to analyze asset performance, minimize risk, and maximize returns. It identifies optimal portfolios through Monte Carlo simulations, calculates risk-return trade-offs, and visualizes key insights to guide informed investment decisions.
