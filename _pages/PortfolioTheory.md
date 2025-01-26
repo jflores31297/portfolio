@@ -1,25 +1,6 @@
----
-layout: single
-classes: wide
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
-sidebar:
-  - title: "Juan Flores"
-    image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
-    text: "Data Scientist"
-    links:
-      - label: "Email"
-        icon: "fas fa-fw fa-envelope-square"
-        url: "mailto:jflores31297@gmail.com"
----
-
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-![Project Cover Image](https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true)
+<div>
+<img src=https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true width="900">
+</div>
 
 ---
 ### Building an Optimal Investment Portfolio Using Modern Portfolio Theory
@@ -70,7 +51,7 @@ import yfinance as yf
 	-	Used to download historical stock prices and other market data required for the analysis.
 
 ---
-
+#
 
 ---
 # Gather Historical Data
@@ -124,52 +105,52 @@ etf_data.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>2024-01-22</td>
-      <td>FZROX</td>
-      <td>16.672844</td>
-      <td>16.672844</td>
-      <td>16.672844</td>
-      <td>16.672844</td>
+      <td>2024-01-25</td>
+      <td>FZILX</td>
+      <td>10.582476</td>
+      <td>10.582476</td>
+      <td>10.582476</td>
+      <td>10.582476</td>
       <td>0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2024-01-22</td>
-      <td>FZILX</td>
-      <td>10.475581</td>
-      <td>10.475581</td>
-      <td>10.475581</td>
-      <td>10.475581</td>
+      <td>2024-01-25</td>
+      <td>FZROX</td>
+      <td>16.791510</td>
+      <td>16.791510</td>
+      <td>16.791510</td>
+      <td>16.791510</td>
       <td>0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2024-01-22</td>
+      <td>2024-01-25</td>
       <td>FXNAX</td>
-      <td>9.957602</td>
-      <td>9.957602</td>
-      <td>9.957602</td>
-      <td>9.957602</td>
+      <td>9.947933</td>
+      <td>9.947933</td>
+      <td>9.947933</td>
+      <td>9.947933</td>
       <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2024-01-23</td>
-      <td>FZROX</td>
-      <td>16.702509</td>
-      <td>16.702509</td>
-      <td>16.702509</td>
-      <td>16.702509</td>
+      <td>2024-01-26</td>
+      <td>FZILX</td>
+      <td>10.621346</td>
+      <td>10.621346</td>
+      <td>10.621346</td>
+      <td>10.621346</td>
       <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2024-01-23</td>
-      <td>FZILX</td>
-      <td>10.485299</td>
-      <td>10.485299</td>
-      <td>10.485299</td>
-      <td>10.485299</td>
+      <td>2024-01-26</td>
+      <td>FZROX</td>
+      <td>16.781622</td>
+      <td>16.781622</td>
+      <td>16.781622</td>
+      <td>16.781622</td>
       <td>0</td>
     </tr>
   </tbody>
@@ -198,7 +179,7 @@ etf_data.head()
 	-	Displays the first five rows of the processed dataset to ensure that the data is correctly formatted and ready for further analysis.
 
 ---
-
+# 
 
 ---
 # Calculate Periodic (Daily) Return for each Ticker
@@ -245,24 +226,6 @@ daily_returns
   </thead>
   <tbody>
     <tr>
-      <th>2024-01-23</th>
-      <td>-0.001942</td>
-      <td>0.000928</td>
-      <td>0.001779</td>
-    </tr>
-    <tr>
-      <th>2024-01-24</th>
-      <td>-0.002918</td>
-      <td>0.007414</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>2024-01-25</th>
-      <td>0.003902</td>
-      <td>0.001840</td>
-      <td>0.005329</td>
-    </tr>
-    <tr>
       <th>2024-01-26</th>
       <td>-0.000972</td>
       <td>0.003673</td>
@@ -275,28 +238,28 @@ daily_returns
       <td>0.008839</td>
     </tr>
     <tr>
+      <th>2024-01-30</th>
+      <td>0.000968</td>
+      <td>-0.001821</td>
+      <td>-0.001168</td>
+    </tr>
+    <tr>
+      <th>2024-01-31</th>
+      <td>0.007564</td>
+      <td>-0.005474</td>
+      <td>-0.016959</td>
+    </tr>
+    <tr>
+      <th>2024-02-01</th>
+      <td>0.004812</td>
+      <td>0.009174</td>
+      <td>0.012493</td>
+    </tr>
+    <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
       <td>...</td>
-    </tr>
-    <tr>
-      <th>2025-01-14</th>
-      <td>0.000000</td>
-      <td>0.006267</td>
-      <td>0.002472</td>
-    </tr>
-    <tr>
-      <th>2025-01-15</th>
-      <td>0.008920</td>
-      <td>0.011566</td>
-      <td>0.018245</td>
-    </tr>
-    <tr>
-      <th>2025-01-16</th>
-      <td>0.001965</td>
-      <td>0.004398</td>
-      <td>-0.000969</td>
     </tr>
     <tr>
       <th>2025-01-17</th>
@@ -309,6 +272,24 @@ daily_returns
       <td>0.002941</td>
       <td>0.016565</td>
       <td>0.009602</td>
+    </tr>
+    <tr>
+      <th>2025-01-22</th>
+      <td>-0.001955</td>
+      <td>0.000000</td>
+      <td>0.005231</td>
+    </tr>
+    <tr>
+      <th>2025-01-23</th>
+      <td>-0.001959</td>
+      <td>0.004288</td>
+      <td>0.005203</td>
+    </tr>
+    <tr>
+      <th>2025-01-24</th>
+      <td>0.000981</td>
+      <td>0.006832</td>
+      <td>-0.002824</td>
     </tr>
   </tbody>
 </table>
@@ -334,7 +315,7 @@ daily_returns
 	-	Displays the resulting dataframe, which contains the daily returns for each ETF in a clean and structured format.
 
 ---
-
+# 
 
 ---
 # Calculate Annualized Expected Returns
@@ -351,9 +332,9 @@ mean_returns
 
 
     Ticker
-    FXNAX    0.029126
-    FZILX    0.122489
-    FZROX    0.274673
+    FXNAX    0.027079
+    FZILX    0.123550
+    FZROX    0.275319
     dtype: float64
 
 
@@ -378,7 +359,7 @@ mean_returns
 	-	Each value represents the expected yearly return for the corresponding asset, based on historical daily performance.
 
 ---
-
+# 
 
 ---
 # Calculate Annualized Covariance Matrix
@@ -394,9 +375,9 @@ cov_matrix
 
 
 
-    array([[0.00302255, 0.00191252, 0.00103896],
-           [0.00191252, 0.01520214, 0.01196937],
-           [0.00103896, 0.01196937, 0.01737783]])
+    array([[0.00300386, 0.00192807, 0.00099983],
+           [0.00192807, 0.01520718, 0.01195968],
+           [0.00099983, 0.01195968, 0.01740806]])
 
 
 
@@ -415,7 +396,7 @@ cov_matrix
 	-	Stores the resulting annualized covariance matrix.
 
 ---
-
+# 
 
 ---
 # Define Function to Calculate Portfolio Expected Return and Standard Deviation 
@@ -452,12 +433,11 @@ def portfolio_performance(weights, returns, cov_matrix):
 	- How It Works:
 	- `np.dot(weights, returns)` performs a dot product between the weights and returns.
 	- This computes the weighted sum of the individual asset returns, representing the portfolio’s overall expected return.
-	- Formula:
-	- $$R_p = \sum_{i=1}^n w_i \cdot r_i$$
-        Where:
-    	- $$(R_p)$$: Portfolio return
-    	- $$(w_i)$$: Weight of the i-th asset
-    	- $$(r_i)$$ : Return of the i-th asset
+	- Formula: $$R_p = \sum_{i=1}^n w_i \cdot r_i$$
+        - Where:
+    	- $R_p$ : Portfolio return
+    	- $w_i$ : Weight of the i-th asset
+    	- $r_i$ : Return of the i-th asset
 
 3. `portfolio_std = np.sqrt(np.dot(weights.T, np.dot(cov_matrix, weights)))`
 	- Purpose: Calculates the portfolio standard deviation (risk).
@@ -465,18 +445,17 @@ def portfolio_performance(weights, returns, cov_matrix):
 	- `np.dot(cov_matrix, weights)` computes the weighted covariance of the assets.
 	- `np.dot(weights.T, result)` then calculates the portfolio’s variance by combining the weights with the covariance matrix.
 	- Finally, `np.sqrt()` computes the standard deviation (square root of the variance), which measures the portfolio’s risk.
-	- Formula:
-	- $$\sigma_p = \sqrt{ \mathbf{w}^T \cdot \Sigma \cdot \mathbf{w} }$$
-        Where:
-    	- $$\sigma_p$$: Portfolio standard deviation
+	- Formula: $$\sigma_p = \sqrt{ \mathbf{w}^T \cdot \Sigma \cdot \mathbf{w} }$$
+        - Where:
+    	- $$\sigma_p$$ : Portfolio standard deviation
     	- $$\mathbf{w}^T$$ : Transposed weight vector
-    	- $\Sigma$ : Covariance matrix
+    	- $$\Sigma$$ : Covariance matrix
 
 4. `return portfolio_return, portfolio_std`
 	- Purpose: Returns both the expected return and risk as a tuple.
 
 ---
-
+#
 
 ---
 # Generate random portfolio weights and calculate their performance
@@ -534,7 +513,8 @@ for i in range(num_portfolios):
 8. Sharpe Ratio Calculation
 	- `sharpe_ratio = ret / std`:
 	- Calculates the Sharpe ratio, a key metric for evaluating risk-adjusted performance.
-	- Formula: $$\text{Sharpe Ratio} = \frac{\text{Portfolio Return}}{\text{Portfolio Standard Deviation}}$$
+	- Formula:
+    - $$\text{Sharpe Ratio} = \frac{\text{Portfolio Return}}{\text{Portfolio Standard Deviation}}$$
 	- A higher Sharpe ratio indicates better risk-adjusted returns.
 9. Storing Results
 	- `results[0, i] = ret`: Stores the portfolio’s return in the first row.
@@ -542,7 +522,7 @@ for i in range(num_portfolios):
 	- `results[2, i] = sharpe_ratio`: Stores the portfolio’s Sharpe ratio in the third row.
 
 ---
-
+#
 
 ---
 # Extract optimal portfolios
@@ -569,7 +549,7 @@ min_vol_idx = np.argmin(results[1])  # Minimum Volatility
 	- `np.argmin(results[1])` returns the index of the minimum value in this row, corresponding to the least risky portfolio.
 
 ---
-
+#
 
 ---
 # Plot Opportunity Set
@@ -602,7 +582,7 @@ plt.show()
 
 
     
-![png](https://github.com/jflores31297/portfolio/blob/main/assets/output_27_0.png?raw=true)
+![png](output_27_0.png)
     
 
 
@@ -639,7 +619,7 @@ plt.show()
 	- Displays the completed chart.
 
 ---
-
+#
 
 ---
 # Display parameters of optimal portfolios
@@ -695,17 +675,17 @@ max_sharpe_portfolio
     <tr>
       <th>0</th>
       <td>FXNAX</td>
-      <td>0.258592</td>
+      <td>0.084879</td>
     </tr>
     <tr>
       <th>1</th>
       <td>FZILX</td>
-      <td>0.000137</td>
+      <td>0.001189</td>
     </tr>
     <tr>
       <th>2</th>
       <td>FZROX</td>
-      <td>0.741271</td>
+      <td>0.913933</td>
     </tr>
   </tbody>
 </table>
@@ -723,9 +703,9 @@ print(f"Sharpe Ratio: {results[2, max_sharpe_idx]:.4f}\n")
 ```
 
     Portfolio with Maximum Sharpe Ratio:
-    Expected Return: 0.2112
-    Volatility (Standard Deviation): 0.1008
-    Sharpe Ratio: 2.0957
+    Expected Return: 0.2541
+    Volatility (Standard Deviation): 0.1214
+    Sharpe Ratio: 2.0924
     
 
 
@@ -808,17 +788,17 @@ min_vol_portfolio
     <tr>
       <th>0</th>
       <td>FXNAX</td>
-      <td>0.875740</td>
+      <td>0.896344</td>
     </tr>
     <tr>
       <th>1</th>
       <td>FZILX</td>
-      <td>0.025498</td>
+      <td>0.010931</td>
     </tr>
     <tr>
       <th>2</th>
       <td>FZROX</td>
-      <td>0.098761</td>
+      <td>0.092725</td>
     </tr>
   </tbody>
 </table>
@@ -836,9 +816,9 @@ print(f"Sharpe Ratio: {results[2, min_vol_idx]:.4f}\n")
 ```
 
     Portfolio with Minimum Volatility:
-    Expected Return: 0.0558
-    Volatility (Standard Deviation): 0.0531
-    Sharpe Ratio: 1.0494
+    Expected Return: 0.0512
+    Volatility (Standard Deviation): 0.0528
+    Sharpe Ratio: 0.9679
     
 
 
@@ -867,7 +847,7 @@ print(f"Sharpe Ratio: {results[2, min_vol_idx]:.4f}\n")
 
 
 ---
-
+#
 
 ---
 Note that the minimum volatility portfolio has a SD lower than that of each of the component asset's SD
@@ -882,9 +862,9 @@ mean_returns
 
 
     Ticker
-    FXNAX    0.029126
-    FZILX    0.122489
-    FZROX    0.274673
+    FXNAX    0.027079
+    FZILX    0.123550
+    FZROX    0.275319
     dtype: float64
 
 
@@ -900,15 +880,15 @@ standard_deviation
 
 
     Ticker
-    FXNAX    0.054978
-    FZILX    0.123297
-    FZROX    0.131825
+    FXNAX    0.054808
+    FZILX    0.123317
+    FZROX    0.131940
     dtype: float64
 
 
 
 ---
-
+#
 
 ---
 # Capital Allocation
@@ -917,13 +897,13 @@ standard_deviation
 # Specify Parameters
 In this section we define key parameters. These parameters form the foundation for the subsequent calculations of the capital allocation line (CAL) and the investor’s optimal allocation between the risk-free asset and the risky portfolio.
 
-1. Risk-Free Rate $(r_f)$:
+1. Risk-Free Rate $$(r_f)$$:
     - We use the 10-year Treasury rate
-2. Expected Return of Risky Portfolio $(E(r_P))$:
+2. Expected Return of Risky Portfolio $$(E(r_P))$$:
     - It uses the results array we obtained previously. The specific value is obtained using the index of the portfolio with the maximum Sharpe ratio (max_sharpe_idx). The round function limits the precision to four decimal places.
-3. Standard Deviation of Risky Portfolio $(\sigma_P)$:
+3. Standard Deviation of Risky Portfolio $$(\sigma_P)$$:
     - Similarly, the standard deviation (risk) of the optimal risky portfolio is extracted from the results array at the maximum Sharpe ratio index and rounded to four decimal places.
-4. Risk Aversion Coefficient $(A)$:
+4. Risk Aversion Coefficient $$(A)$$:
     - This constant represents the investor’s level of risk aversion, where higher values indicate greater aversion to risk.
 
 
@@ -935,15 +915,18 @@ sigma_P = round(results[1, max_sharpe_idx], 4) # standard deviation of risky por
 A = 22 # Risk Aversion Coefficient
 ```
 
-
+#
 ---
 # Define Function to Calculate Expected Return of Composite Portfolio 
-This function calculates the Expected Return of a Composite Portfolio $(E(r_C))$ for a given level of risk $(\sigma_C)$, using the Capital Market Line (CML) formula:$$E(r_C) = r_f + \left( \frac{E(r_P) - r_f}{\sigma_P} \right) \cdot \sigma_C$$
+This function calculates the Expected Return of a Composite Portfolio $$(E(r_C))$$ for a given level of risk $$(\sigma_C)$$, using the Capital Market Line (CML) formula:
+$$E(r_C) = r_f + \left( \frac{E(r_P) - r_f}{\sigma_P} \right) \cdot \sigma_C$$
+
 Where:
-- $r_f$: Risk-free rate of return.
-- $E(r_P)$: Expected return of the risky portfolio.
-- $\sigma_P$: Standard deviation of the risky portfolio (risk).
-- $\sigma_C$: Standard deviation (risk) of the composite portfolio.
+
+- $$r_f$$: Risk-free rate of return.
+- $$E(r_P)$$: Expected return of the risky portfolio.
+- $$\sigma_P$$: Standard deviation of the risky portfolio (risk).
+- $$\sigma_C$$: Standard deviation (risk) of the composite portfolio.
   
 The Capital Market Line (CML) represents the risk-return relationship of a portfolio that combines a risk-free asset and the optimal risky portfolio.
 
@@ -966,20 +949,20 @@ def calculate_E_R_C(sigma_C):
 1. Input:
    - `sigma_C`: The risk (standard deviation) of the composite portfolio.
 2. Calculation:
-	- The CML formula calculates the expected return $E(r_C)$ based on the linear relationship between risk $(\sigma_C)$ and return. The slope of the line $(\frac{E(r_P) - r_f}{\sigma_P})$ represents the Sharpe Ratio of the risky portfolio.
+	- The CML formula calculates the expected return $$E(r_C)$$ based on the linear relationship between risk $$(\sigma_C)$$ and return. The slope of the line $$(\frac{E(r_P) - r_f}{\sigma_P})$$ represents the Sharpe Ratio of the risky portfolio.
 3. Output:
 	- The function returns `E_R_C`, the expected return of the composite portfolio for the given level of risk.
 
 This function provides the building block for analyzing the performance of composite portfolios along the CML.
 
 ---
-
+#
 
 ---
-# Generating a Range of Risk $(\sigma_C)$ Values
-In this step, we create an array of risk values $(\sigma_C)$ to represent the range of possible standard deviations for composite portfolios along the Capital Market Line (CML).
+# Generating a Range of Risk $$(\sigma_C)$$ Values
+In this step, we create an array of risk values $$(\sigma_C)$$ to represent the range of possible standard deviations for composite portfolios along the Capital Market Line (CML).
 
-The array of $\sigma_C$ values will be used to calculate the corresponding expected returns $(E(r_C))$ for portfolios that combine the risk-free asset and the optimal risky portfolio.
+The array of $$\sigma_C$$ values will be used to calculate the corresponding expected returns $$(E(r_C))$$ for portfolios that combine the risk-free asset and the optimal risky portfolio.
 
 
 ```python
@@ -994,14 +977,14 @@ sigma_C_values = np.linspace(0, sigma_P, 100)
 - `sigma_P` represents a portfolio invested entirely in the risky portfolio (maximum risk).
 
 - Output:
-	- `sigma_C_values` is an array of 100 risk values ranging from no risk (0) to the maximum risk of the risky portfolio $(\sigma_P)$.
+	- `sigma_C_values` is an array of 100 risk values ranging from no risk (0) to the maximum risk of the risky portfolio $$(\sigma_P)$$.
  
 ---
-
+#
 
 ---
-# Calculating Expected Returns $(E(R_C))$ for Composite Portfolios
-This line calculates the various Expected Returns of the Composite Portfolio using our pre-defined function for the range of risk values $(\sigma_C)$ generated above.
+# Calculating Expected Returns $$(E(R_C))$$ for Composite Portfolios
+This line calculates the various Expected Returns of the Composite Portfolio using our pre-defined function for the range of risk values $$(\sigma_C)$$ generated above.
 
 
 ```python
@@ -1013,28 +996,31 @@ E_R_C_values = calculate_E_R_C(sigma_C_values)
 1. Function Call:
 	- The previously defined function `calculate_E_R_C(sigma_C)` is applied to the array `sigma_C_values`, which represents different levels of portfolio risk.
 2. Calculation:
-	- For each value of $\sigma_C$ in `sigma_C_values`, the function computes the corresponding expected return $(E(R_C))$ using the CML formula: $$E(R_C) = r_f + \frac{E(R_P) - r_f}{\sigma_P} \cdot \sigma_C$$
-	- This results in an array of $E(R_C)$ values that represent the expected returns for each level of risk along the CML.
+	- For each value of $$\sigma_C$$ in `sigma_C_values`, the function computes the corresponding expected return $$(E(R_C))$$ using the CML formula:
+    - $$E(R_C) = r_f + \frac{E(R_P) - r_f}{\sigma_P} \cdot \sigma_C$$
+	- This results in an array of $$E(R_C)$$ values that represent the expected returns for each level of risk along the CML.
 3. Output:
 	- `E_R_C_values`: An array containing the expected return values corresponding to the risk levels in `sigma_C_values`.
 
 Significance: 
-- These $E(R_C)$ values will form the y-axis when plotting the Capital Market Line (CML), illustrating the risk-return trade-off for composite portfolios.
+- These $$E(R_C)$$ values will form the y-axis when plotting the Capital Market Line (CML), illustrating the risk-return trade-off for composite portfolios.
 
 ---
-
+#
 
 ---
-# Calculate the Optimal Allocation to the Risky Portfolio $(y)$
-In this step, we determine the proportion of an investor’s capital $(y)$ that should be allocated to the risky portfolio to maximize utility, given the investor’s risk tolerance.
+# Calculate the Optimal Allocation to the Risky Portfolio $$(y)$$
+In this step, we determine the proportion of an investor’s capital $$(y)$$ that should be allocated to the risky portfolio to maximize utility, given the investor’s risk tolerance.
 
-The formula used is: $$y = \frac{E[R_P] - r_f}{A \cdot \sigma_P^2}$$
+The formula used is: 
+$$y = \frac{E[R_P] - r_f}{A \cdot \sigma_P^2}$$
 
 Where:
-- $E(R_P)$: Expected return of the risky portfolio.
-- $r_f$: Risk-free rate of return.
-- $A$: Investor’s risk aversion coefficient (higher A indicates more risk-averse behavior).
-- $\sigma_P^2$: Variance of the risky portfolio.
+
+- $$E(R_P)$$: Expected return of the risky portfolio.
+- $$r_f$$: Risk-free rate of return.
+- $$A$$: Investor’s risk aversion coefficient (higher A indicates more risk-averse behavior).
+- $$\sigma_P^2$$: Variance of the risky portfolio.
 
 
 
@@ -1048,32 +1034,33 @@ y = (E_R_P - r_f)/(A*(sigma_P**2))
 	- `(E(R_P) - r_f)`: The excess return of the risky portfolio over the risk-free rate.
 	- This measures the reward for taking on the risk of investing in the risky portfolio.
 2. Risk Aversion and Variance:
-	- `(A*(sigma_P**2))`: Represents the penalty for taking on additional risk. Higher risk aversion $(A)$ or portfolio variance $(\sigma_P^2)$ decreases the allocation to the risky portfolio.
-3. Optimal Allocation $(y)$:
-	- The result of the formula gives the optimal proportion of the investor’s capital to allocate to the risky portfolio, where $0 \leq y \leq 1$.
-	- If $y > 1$, it implies leveraging (borrowing funds to invest more than 100% in the risky portfolio).
+	- `(A*(sigma_P**2))`: Represents the penalty for taking on additional risk. Higher risk aversion $$(A)$$ or portfolio variance $$(\sigma_P^2)$$ decreases the allocation to the risky portfolio.
+3. Optimal Allocation $$(y)$$:
+	- The result of the formula gives the optimal proportion of the investor’s capital to allocate to the risky portfolio, where $$0 \leq y \leq 1$$.
+	- If $$y > 1$$, it implies leveraging (borrowing funds to invest more than 100% in the risky portfolio).
 
 Significance:
 
 - This calculation determines the risk-return balance for the investor:
-	- A risk-averse investor ($A$ is high) will allocate less to the risky portfolio.
-	- A risk-tolerant investor ($A$ is low) will allocate more to the risky portfolio.
+	- A risk-averse investor ($$A$$ is high) will allocate less to the risky portfolio.
+	- A risk-tolerant investor ($$A$$ is low) will allocate more to the risky portfolio.
 
 ---
-
+#
 
 ---
 # Calculate the Maximum Utility 
 In this step, we calculate the maximum utility that an investor can achieve by allocating the optimal proportion (y) to the risky portfolio. Utility is a measure of the satisfaction or benefit derived from wealth, and it helps in determining the optimal investment choice.
 
-The formula used is: $$U_{\text{max}} = r_f + y \cdot [E(r_P) - r_f] - {1\over 2} \cdot A \cdot y^2 \cdot \sigma_P^2$$
+The formula used is:
+$$U_{\text{max}} = r_f + y \cdot [E(r_P) - r_f] - {1\over 2} \cdot A \cdot y^2 \cdot \sigma_P^2$$
 
 Where:
-- $r_f=$ Risk-free rate of return.
-- $y=$ Optimal allocation to the risky portfolio, previously calculated.
-- $E(r_P)=$ Expected return of the risky portfolio.
-- $A=$ Investor’s risk aversion coefficient.
-- $\sigma_P^2=$ Variance of the risky portfolio.
+- $$r_f=$$ Risk-free rate of return.
+- $$y=$$ Optimal allocation to the risky portfolio, previously calculated.
+- $$E(r_P)=$$ Expected return of the risky portfolio.
+- $$A=$$ Investor’s risk aversion coefficient.
+- $$\sigma_P^2=$$ Variance of the risky portfolio.
 
 
 ```python
@@ -1084,20 +1071,20 @@ Max_U = r_f + y*(E_R_P - r_f) - .5 * A * (y**2) * (sigma_P**2)
 1. First Term `r_f`:
     - This represents the return from the risk-free asset.
 2. Second Term `y*(E_R_P - r_f)`:
-	- This is the return from the risky portfolio. The investor allocates $y$ proportion to the risky portfolio, and the term $[E(r_P) - r_f]$ is the risk premium (the return above the risk-free rate).
+	- This is the return from the risky portfolio. The investor allocates $$y$$ proportion to the risky portfolio, and the term $$[E(r_P) - r_f]$$ is the risk premium (the return above the risk-free rate).
 3. Third Term `- .5 * A * (y**2) * (sigma_P**2)`:
-	- This represents the penalty for risk. The investor incurs a cost for taking on risk, which is quadratic in the amount allocated to the risky portfolio. This cost increases with the level of risk $(y^2 \cdot \sigma_P^2)$ and the investor’s risk aversion $(A)$.
+	- This represents the penalty for risk. The investor incurs a cost for taking on risk, which is quadratic in the amount allocated to the risky portfolio. This cost increases with the level of risk $$(y^2 \cdot \sigma_P^2)$$ and the investor’s risk aversion $$(A)$$.
 
 Significance
-- The maximum utility $(U_{\text{max}})$ is the highest level of satisfaction or wealth that the investor can achieve given their risk tolerance and the return characteristics of the available assets.
+- The maximum utility $$(U_{\text{max}})$$ is the highest level of satisfaction or wealth that the investor can achieve given their risk tolerance and the return characteristics of the available assets.
 - The formula balances the investor’s desire for higher returns with their aversion to risk, ensuring that the optimal allocation maximizes their utility.
 
 ---
-
+#
 
 ---
 # Generating Risk and Expected Return for the Indifference Curve
-In this step, we generate a range of risk values $(\sigma)$ and calculate the corresponding expected returns $(E(r))$ to plot the indifference curve for the optimal portfolio.
+In this step, we generate a range of risk values $$(\sigma)$$ and calculate the corresponding expected returns $$(E(r))$$ to plot the indifference curve for the optimal portfolio.
 
 **Purpose:**
 - The resulting array `E_r` represents the expected returns for a set of portfolio risks along the indifference curve.
@@ -1112,21 +1099,21 @@ E_r = Max_U + 0.5 * A * sigma_range**2
 ```
 
 **Code Breakdown:**
-1. Generating the Range of Risk Values $(\sigma)$:
+1. Generating the Range of Risk Values $$(\sigma)$$:
 	- `sigma_range = np.linspace(0, 0.12, 500)`
 	- This generates an array of 500 equally spaced risk values between 0 and 0.12 (12%). This range represents various levels of portfolio risk that an investor might consider, from no risk (0%) to relatively high risk (12%).
-2. Calculating Corresponding Expected Returns $(E(r))$:
+2. Calculating Corresponding Expected Returns $$(E(r))$$:
 	- `E_r = Max_U + 0.5 * A * sigma_range**2`
 	- This formula calculates the expected return for each risk value along the indifference curve.
 
 ---
-
+#
 
 ---
 # Calculating and Displaying the Optimal Portfolio Parameters
 In this section, the code calculates the optimal parameters for the composite portfolio, including the allocation to the risky asset, the risk-free asset, and the expected return and standard deviation of the composite portfolio. Then, it prints out the results for the user.
 
-We calculate the Standard Deviation of the Optimal Portfolio using the function $\sigma_C=y\sigma_P$
+We calculate the Standard Deviation of the Optimal Portfolio using the function $$\sigma_C=y\sigma_P$$
 
 We calculate the expected return of the optimal portfolio using our pre-defined function (calculate_E_R_C) using the standard deviation of the optimal portfolio we calculated above as the input.
 
@@ -1150,29 +1137,29 @@ print(f"Standard Deviation of Composite Portfolio = {SD_C:.2f}")
 ```
 
     Optimal Portfolio Parameters:
-    Optimal Allocation to Risky Portfolio = 0.74
-    Optimal Allocation to Risk-Free Asset = 0.26
-    Expected Return of Composite Portfolio = 0.17
-    Standard Deviation of Composite Portfolio = 0.07
+    Optimal Allocation to Risky Portfolio = 0.64
+    Optimal Allocation to Risk-Free Asset = 0.36
+    Expected Return of Composite Portfolio = 0.18
+    Standard Deviation of Composite Portfolio = 0.08
 
 
 **Code Breakdown:**
 1. Calculate the Standard Deviation of the Composite Portfolio (SD_C):
 	- `SD_C = y * sigma_P`
-	- The standard deviation of the composite portfolio is calculated by multiplying the optimal allocation to the risky portfolio $(y)$ by the standard deviation of the risky portfolio $(\sigma_P)$.
-	- This reflects the level of risk associated with the composite portfolio, which combines the risk-free asset and the risky portfolio in the proportion $y$.
-2. Calculate the Expected Return of the Composite Portfolio $(E(r_C))$:
+	- The standard deviation of the composite portfolio is calculated by multiplying the optimal allocation to the risky portfolio $$(y)$$ by the standard deviation of the risky portfolio $$(\sigma_P)$$.
+	- This reflects the level of risk associated with the composite portfolio, which combines the risk-free asset and the risky portfolio in the proportion $$y$$.
+2. Calculate the Expected Return of the Composite Portfolio $$(E(r_C))$$:
 	- `Optimal_E_R_C = calculate_E_R_C(SD_C)`
 	- Using the previously defined function `calculate_E_R_C(sigma_C)`, the expected return of the composite portfolio is computed for the calculated risk (SD_C).
 3. Printing the Results:
 	- The results are displayed with formatted print statements that show the optimal portfolio parameters:
-	- Optimal Allocation to Risky Portfolio $(y)$: The proportion of the portfolio allocated to the risky asset.
-	- Optimal Allocation to Risk-Free Asset $(1-y)$: The remaining portion of the portfolio allocated to the risk-free asset.
-	- Expected Return of Composite Portfolio $(E(r_C))$: The expected return for the composite portfolio based on the optimal allocation.
-	- Standard Deviation of Composite Portfolio $(\sigma_C)$: The overall risk of the composite portfolio.
+	- Optimal Allocation to Risky Portfolio $$(y)$$: The proportion of the portfolio allocated to the risky asset.
+	- Optimal Allocation to Risk-Free Asset $$(1-y)$$: The remaining portion of the portfolio allocated to the risk-free asset.
+	- Expected Return of Composite Portfolio $$(E(r_C))$$: The expected return for the composite portfolio based on the optimal allocation.
+	- Standard Deviation of Composite Portfolio $$(\sigma_C)$$: The overall risk of the composite portfolio.
 
 ---
-
+#
 
 ---
 # Plot the Capital Allocation Line (CAL) and Utility Indifference Curve
@@ -1212,7 +1199,7 @@ plt.show()
 
 
     
-![png](https://github.com/jflores31297/portfolio/blob/main/assets/output_71_0.png?raw=true)
+![png](output_71_0.png)
     
 
 
@@ -1222,14 +1209,14 @@ plt.show()
 	- The Capital Allocation Line (CAL) is plotted using the `sigma_C_values` (the risk values) and `E_R_C_values` (the expected returns for each risk level). The line represents the trade-off between risk and return for portfolios that combine the risk-free asset and the risky portfolio.
 2. Plotting the Utility Indifference Curve:
 	- `plt.plot(sigma_range, E_r, linestyle='--', linewidth=2, label=f"Indifference Curve (A={A/10}, U={Max_U:.2f})")`
-	- The indifference curve is plotted as a dashed line. This curve represents the combinations of risk and return that give the investor the same level of utility, considering their risk aversion $A$ and the maximum utility $(U_{\text{max}})$.
+	- The indifference curve is plotted as a dashed line. This curve represents the combinations of risk and return that give the investor the same level of utility, considering their risk aversion $$A$$ and the maximum utility $$(U_{\text{max}})$$.
 3. Marking Key Points:
-	- Risky Portfolio $(P)$:
+	- Risky Portfolio $$(P)$$:
     	- `plt.scatter(sigma_P, E_R_P, color='red', label=f"Risky Portfolio (P) with $E(r_P)={E_R_P}, \\sigma_P={sigma_P}$")`
-    	- The red point marks the risky portfolio $(P)$, showing its expected return and risk (standard deviation).
-	- Optimal Portfolio $(C)$:
+    	- The red point marks the risky portfolio $$(P)$$, showing its expected return and risk (standard deviation).
+	- Optimal Portfolio $$(C)$$:
     	- `plt.scatter(SD_C, Optimal_E_R_C, color='green', label='Optimal Allocation Portfolio (C)')`
-    	- The green point marks the optimal portfolio $(C)$, indicating the portfolio that combines the risk-free asset and the risky portfolio for maximum utility.
+    	- The green point marks the optimal portfolio $$(C)$$, indicating the portfolio that combines the risk-free asset and the risky portfolio for maximum utility.
 	- Risk-Free Asset:
     	- `plt.scatter(0, r_f, color='black')`
     	- A black dot marks the risk-free asset (with zero risk and the risk-free rate of return).
@@ -1251,9 +1238,9 @@ plt.show()
 	- The `plt.xlim(0, )` and `plt.ylim(0, )` functions adjust the plot’s axes, ensuring a clear and informative display.
 
 Purpose:
-- This plot provides a visual representation of how the optimal portfolio $(C)$ compares to other portfolios along the Capital Allocation Line (CAL).
+- This plot provides a visual representation of how the optimal portfolio $$(C)$$ compares to other portfolios along the Capital Allocation Line (CAL).
 - It also shows the indifference curve, marking the trade-offs the investor faces in terms of risk and expected return.
-- The plot highlights key portfolios like the risky portfolio $(P)$, minimum volatility portfolio, and optimal portfolio $(C)$ to guide decision-making based on the investor’s preferences and risk tolerance.
+- The plot highlights key portfolios like the risky portfolio $$(P)$$, minimum volatility portfolio, and optimal portfolio $$(C)$$ to guide decision-making based on the investor’s preferences and risk tolerance.
 
 
 ```python
