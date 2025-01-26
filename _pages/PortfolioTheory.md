@@ -452,11 +452,12 @@ def portfolio_performance(weights, returns, cov_matrix):
 	- How It Works:
 	- `np.dot(weights, returns)` performs a dot product between the weights and returns.
 	- This computes the weighted sum of the individual asset returns, representing the portfolio’s overall expected return.
-	- Formula: $$R_p = \sum_{i=1}^n w_i \cdot r_i$$
+	- Formula:
+	- $$R_p = \sum_{i=1}^n w_i \cdot r_i$$
         Where:
-    	- $(R_p)$: Portfolio return
-    	- $(w_i)$: Weight of the i-th asset
-    	- $(r_i)$: Return of the i-th asset
+    	- $$(R_p)$$: Portfolio return
+    	- $$(w_i)$$: Weight of the i-th asset
+    	- $$(r_i)$$ : Return of the i-th asset
 
 3. `portfolio_std = np.sqrt(np.dot(weights.T, np.dot(cov_matrix, weights)))`
 	- Purpose: Calculates the portfolio standard deviation (risk).
@@ -464,10 +465,11 @@ def portfolio_performance(weights, returns, cov_matrix):
 	- `np.dot(cov_matrix, weights)` computes the weighted covariance of the assets.
 	- `np.dot(weights.T, result)` then calculates the portfolio’s variance by combining the weights with the covariance matrix.
 	- Finally, `np.sqrt()` computes the standard deviation (square root of the variance), which measures the portfolio’s risk.
-	- Formula: $$\sigma_p = \sqrt{ \mathbf{w}^T \cdot \Sigma \cdot \mathbf{w} }$$
+	- Formula:
+	- $$\sigma_p = \sqrt{ \mathbf{w}^T \cdot \Sigma \cdot \mathbf{w} }$$
         Where:
-    	- $\sigma_p$ : Portfolio standard deviation
-    	- $\mathbf{w}^T$ : Transposed weight vector
+    	- $$\sigma_p$$: Portfolio standard deviation
+    	- $$\mathbf{w}^T$$ : Transposed weight vector
     	- $\Sigma$ : Covariance matrix
 
 4. `return portfolio_return, portfolio_std`
