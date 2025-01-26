@@ -1,9 +1,3 @@
-<head>
-  <script type="text/javascript" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-</head>
-
 title: Juan Flores
 description: Data Scientist 
 plugins:
@@ -23,3 +17,9 @@ sidebar:
       - label: "Email"
         icon: "fas fa-fw fa-envelope-square"
         url: "mailto:jflores31297@gmail.com"    
+
+<head>
+  <script type="text/javascript" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
