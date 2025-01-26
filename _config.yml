@@ -18,3 +18,7 @@ sidebar:
         icon: "fas fa-fw fa-envelope-square"
         url: "mailto:jflores31297@gmail.com"    
 
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
