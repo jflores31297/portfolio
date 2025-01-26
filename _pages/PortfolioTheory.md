@@ -1,5 +1,13 @@
 ---
 layout: single
+sidebar:
+  - title: "Juan Flores"
+    image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
+    text: "Data Scientist"
+    links:
+      - label: "Email"
+        icon: "fas fa-fw fa-envelope-square"
+        url: "mailto:jflores31297@gmail.com"
 ---
 
 ![Project Cover Image](https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true)
