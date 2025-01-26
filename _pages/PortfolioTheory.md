@@ -444,11 +444,11 @@ def portfolio_performance(weights, returns, cov_matrix):
 	- How It Works:
 	- `np.dot(weights, returns)` performs a dot product between the weights and returns.
 	- This computes the weighted sum of the individual asset returns, representing the portfolio’s overall expected return.
-	- Formula: $$R_p = \sum_{i=1}^n w_i \cdot r_i$$
+	- Formula: \[R_p = \sum_{i=1}^n w_i \cdot r_i\] 
         Where:
-    	- $R_p$ : Portfolio return
-    	- $w_i$ : Weight of the i-th asset
-    	- $r_i$ : Return of the i-th asset
+    	- \(R_p\) : Portfolio return
+    	- \(w_i\) : Weight of the i-th asset
+    	- \(r_i\) : Return of the i-th asset
 
 3. `portfolio_std = np.sqrt(np.dot(weights.T, np.dot(cov_matrix, weights)))`
 	- Purpose: Calculates the portfolio standard deviation (risk).
