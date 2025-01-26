@@ -15,6 +15,9 @@ sidebar:
         url: "mailto:jflores31297@gmail.com"
 ---
 
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 ![Project Cover Image](https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true)
 
