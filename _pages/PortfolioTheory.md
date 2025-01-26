@@ -1,6 +1,10 @@
 ---
 layout: single
 classes: wide
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
 sidebar:
   - title: "Juan Flores"
     image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
@@ -11,15 +15,6 @@ sidebar:
         url: "mailto:jflores31297@gmail.com"
 ---
 
-<script type="text/javascript">
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']]
-  },
-  svg: { fontCache: 'global' }
-};
-</script>
 
 ![Project Cover Image](https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true)
 
