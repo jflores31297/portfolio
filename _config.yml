@@ -7,18 +7,4 @@ minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon
 logo: "https://github.com/jflores31297/portfolio/blob/main/assets/abstract-logo.png?raw=true"
 include: ["_pages"]
 layout: single
-classes: wide
-layout: single
-sidebar:
-  - title: "Juan Flores"
-    image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
-    text: "Data Scientist"
-    links:
-      - label: "Email"
-        icon: "fas fa-fw fa-envelope-square"
-        url: "mailto:jflores31297@gmail.com"    
-
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+classes: wide   
