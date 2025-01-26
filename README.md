@@ -4,5 +4,5 @@
 ---
 ## Projects
 ![Project Cover Image](https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true)
-[**Investment Portfolio Management with Python**](_pages/PortfolioTheory.html)
+[**Investment Portfolio Management with Python**](_pages/portfolio_management.html)
 This project aims to optimize investment portfolios using Python by applying Modern Portfolio Theory (MPT) to analyze asset performance, minimize risk, and maximize returns. It identifies optimal portfolios through Monte Carlo simulations, calculates risk-return trade-offs, and visualizes key insights to guide informed investment decisions.
