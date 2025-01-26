@@ -450,9 +450,11 @@ def portfolio_performance(weights, returns, cov_matrix):
         
 	- Where:
 
-   	- $R_p$ : Portfolio return
-    	- $w_i$ : Weight of the i-th asset
-    	- $r_i$ : Return of the i-th asset
+   	- $$R_p$$ : Portfolio return
+   	  
+   	- $$w_i$$ : Weight of the i-th asset
+   	  
+    	- $$r_i$$ : Return of the i-th asset
 
 3. `portfolio_std = np.sqrt(np.dot(weights.T, np.dot(cov_matrix, weights)))`
 	- Purpose: Calculates the portfolio standard deviation (risk).
@@ -466,8 +468,10 @@ def portfolio_performance(weights, returns, cov_matrix):
 	- Where:
 
    	- $$\sigma_p$$ : Portfolio standard deviation
+   	  
     	- $$\mathbf{w}^T$$ : Transposed weight vector
-    	- $$\Sigma$$ : Covariance matrix
+   	  
+   	- $$\Sigma$$ : Covariance matrix
 
 4. `return portfolio_return, portfolio_std`
 	- Purpose: Returns both the expected return and risk as a tuple.
