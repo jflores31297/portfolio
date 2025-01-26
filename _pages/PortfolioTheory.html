@@ -1,33 +1,44 @@
 ---
 layout: single
 classes: wide
-markdown: kramdown
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
 sidebar:
   - title: "Juan Flores"
     image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
-    text: "Data Scientist"
-    links:
-      - label: "Email"
-        icon: "fas fa-fw fa-envelope-square"
-        url: "mailto:jflores31297@gmail.com"
+    text: "Data Scientist"    
 ---
 
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
-<script type="text/javascript">
-MathJax = {
-  tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']]
-  },
-  svg: { fontCache: 'global' }
-};
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathJax on GitHub Pages</title>
+  <!-- Load MathJax -->
+  <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$']], // Single dollar for inline math
+        displayMath: [['$$', '$$']], // Double dollar for block math
+        processEscapes: true, // Allows escaping \$ for literal dollar signs
+        processEnvironments: true // Enables support for \begin{equation} environments
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'], // Avoid processing in certain tags
+        renderActions: {
+          find: [10, function (doc) {
+            document.querySelectorAll('pre code').forEach((node) => {
+              MathJax.startup.document.clear();
+              MathJax.startup.document.convert(node);
+            });
+          }, '']
+        }
+      }
+    };
+  </script>
+</head>
+</html>
 
 <!DOCTYPE html>
 
