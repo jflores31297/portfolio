@@ -1,15 +1,3 @@
----
-layout: single
-sidebar:
-  - title: "Juan Flores"
-    image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
-    text: "Data Scientist"
-    links:
-      - label: "Email"
-        icon: "fas fa-fw fa-envelope-square"
-        url: "mailto:jflores31297@gmail.com"
----
-
 # Hi! My name is Juan, and I am passionate about turning complex data into actionable insights. I specialize in business analytics and data visualization. Check out some of my latest work below.
 ---
 ## Projects
