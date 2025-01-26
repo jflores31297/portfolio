@@ -1,4 +1,5 @@
 ---
+layout: single
 sidebar:
   - title: "Juan Flores"
     image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
