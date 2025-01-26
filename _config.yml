@@ -6,11 +6,9 @@ remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 logo: "https://github.com/jflores31297/portfolio/blob/main/assets/abstract-logo.png?raw=true"
 include: ["_pages"]
-defaults:
-  # _pages
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
+layout: single
+classes: wide
+sidebar:
+  - title: "Juan Flores"
+    image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
+    
