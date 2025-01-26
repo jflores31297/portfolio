@@ -11,9 +11,8 @@ sidebar:
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<div>
-<img src=https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true width="900">
-</div>
+
+<img src="https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true" width="900">
 
 ---
 ### Building an Optimal Investment Portfolio Using Modern Portfolio Theory
@@ -64,7 +63,7 @@ import yfinance as yf
 	-	Used to download historical stock prices and other market data required for the analysis.
 
 ---
-#
+
 
 ---
 # Gather Historical Data
@@ -192,7 +191,7 @@ etf_data.head()
 	-	Displays the first five rows of the processed dataset to ensure that the data is correctly formatted and ready for further analysis.
 
 ---
-# 
+
 
 ---
 # Calculate Periodic (Daily) Return for each Ticker
@@ -328,7 +327,7 @@ daily_returns
 	-	Displays the resulting dataframe, which contains the daily returns for each ETF in a clean and structured format.
 
 ---
-# 
+
 
 ---
 # Calculate Annualized Expected Returns
@@ -372,7 +371,7 @@ mean_returns
 	-	Each value represents the expected yearly return for the corresponding asset, based on historical daily performance.
 
 ---
-# 
+
 
 ---
 # Calculate Annualized Covariance Matrix
@@ -409,7 +408,7 @@ cov_matrix
 	-	Stores the resulting annualized covariance matrix.
 
 ---
-# 
+
 
 ---
 # Define Function to Calculate Portfolio Expected Return and Standard Deviation 
@@ -446,9 +445,12 @@ def portfolio_performance(weights, returns, cov_matrix):
 	- How It Works:
 	- `np.dot(weights, returns)` performs a dot product between the weights and returns.
 	- This computes the weighted sum of the individual asset returns, representing the portfolio’s overall expected return.
-	- Formula: $$R_p = \sum_{i=1}^n w_i \cdot r_i$$
-        - Where:
-    	- $R_p$ : Portfolio return
+	- Formula:
+	- $$R_p = \sum_{i=1}^n w_i \cdot r_i$$
+        
+	- Where:
+
+   	- $R_p$ : Portfolio return
     	- $w_i$ : Weight of the i-th asset
     	- $r_i$ : Return of the i-th asset
 
@@ -458,9 +460,12 @@ def portfolio_performance(weights, returns, cov_matrix):
 	- `np.dot(cov_matrix, weights)` computes the weighted covariance of the assets.
 	- `np.dot(weights.T, result)` then calculates the portfolio’s variance by combining the weights with the covariance matrix.
 	- Finally, `np.sqrt()` computes the standard deviation (square root of the variance), which measures the portfolio’s risk.
-	- Formula: $$\sigma_p = \sqrt{ \mathbf{w}^T \cdot \Sigma \cdot \mathbf{w} }$$
-        - Where:
-    	- $$\sigma_p$$ : Portfolio standard deviation
+	- Formula:
+	- $$\sigma_p = \sqrt{ \mathbf{w}^T \cdot \Sigma \cdot \mathbf{w} }$$
+        
+	- Where:
+
+   	- $$\sigma_p$$ : Portfolio standard deviation
     	- $$\mathbf{w}^T$$ : Transposed weight vector
     	- $$\Sigma$$ : Covariance matrix
 
@@ -468,7 +473,7 @@ def portfolio_performance(weights, returns, cov_matrix):
 	- Purpose: Returns both the expected return and risk as a tuple.
 
 ---
-#
+
 
 ---
 # Generate random portfolio weights and calculate their performance
@@ -535,7 +540,7 @@ for i in range(num_portfolios):
 	- `results[2, i] = sharpe_ratio`: Stores the portfolio’s Sharpe ratio in the third row.
 
 ---
-#
+
 
 ---
 # Extract optimal portfolios
@@ -562,7 +567,7 @@ min_vol_idx = np.argmin(results[1])  # Minimum Volatility
 	- `np.argmin(results[1])` returns the index of the minimum value in this row, corresponding to the least risky portfolio.
 
 ---
-#
+
 
 ---
 # Plot Opportunity Set
@@ -632,7 +637,7 @@ plt.show()
 	- Displays the completed chart.
 
 ---
-#
+
 
 ---
 # Display parameters of optimal portfolios
@@ -860,7 +865,7 @@ print(f"Sharpe Ratio: {results[2, min_vol_idx]:.4f}\n")
 
 
 ---
-#
+
 
 ---
 Note that the minimum volatility portfolio has a SD lower than that of each of the component asset's SD
@@ -901,7 +906,7 @@ standard_deviation
 
 
 ---
-#
+
 
 ---
 # Capital Allocation
@@ -928,7 +933,7 @@ sigma_P = round(results[1, max_sharpe_idx], 4) # standard deviation of risky por
 A = 22 # Risk Aversion Coefficient
 ```
 
-#
+
 ---
 # Define Function to Calculate Expected Return of Composite Portfolio 
 This function calculates the Expected Return of a Composite Portfolio $$(E(r_C))$$ for a given level of risk $$(\sigma_C)$$, using the Capital Market Line (CML) formula:
@@ -969,7 +974,7 @@ def calculate_E_R_C(sigma_C):
 This function provides the building block for analyzing the performance of composite portfolios along the CML.
 
 ---
-#
+
 
 ---
 # Generating a Range of Risk $$(\sigma_C)$$ Values
@@ -993,7 +998,7 @@ sigma_C_values = np.linspace(0, sigma_P, 100)
 	- `sigma_C_values` is an array of 100 risk values ranging from no risk (0) to the maximum risk of the risky portfolio $$(\sigma_P)$$.
  
 ---
-#
+
 
 ---
 # Calculating Expected Returns $$(E(R_C))$$ for Composite Portfolios
@@ -1019,7 +1024,7 @@ Significance:
 - These $$E(R_C)$$ values will form the y-axis when plotting the Capital Market Line (CML), illustrating the risk-return trade-off for composite portfolios.
 
 ---
-#
+
 
 ---
 # Calculate the Optimal Allocation to the Risky Portfolio $$(y)$$
@@ -1059,7 +1064,7 @@ Significance:
 	- A risk-tolerant investor ($$A$$ is low) will allocate more to the risky portfolio.
 
 ---
-#
+
 
 ---
 # Calculate the Maximum Utility 
@@ -1093,7 +1098,7 @@ Significance
 - The formula balances the investor’s desire for higher returns with their aversion to risk, ensuring that the optimal allocation maximizes their utility.
 
 ---
-#
+
 
 ---
 # Generating Risk and Expected Return for the Indifference Curve
@@ -1120,7 +1125,7 @@ E_r = Max_U + 0.5 * A * sigma_range**2
 	- This formula calculates the expected return for each risk value along the indifference curve.
 
 ---
-#
+
 
 ---
 # Calculating and Displaying the Optimal Portfolio Parameters
@@ -1172,7 +1177,7 @@ print(f"Standard Deviation of Composite Portfolio = {SD_C:.2f}")
 	- Standard Deviation of Composite Portfolio $$(\sigma_C)$$: The overall risk of the composite portfolio.
 
 ---
-#
+
 
 ---
 # Plot the Capital Allocation Line (CAL) and Utility Indifference Curve
