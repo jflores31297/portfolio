@@ -1,3 +1,16 @@
+---
+layout: single
+classes: wide
+sidebar:
+  - title: "Juan Flores"
+    image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
+    text: "Data Scientist"   
+---
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 <div>
 <img src=https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true width="900">
 </div>
@@ -582,7 +595,7 @@ plt.show()
 
 
     
-![png](output_27_0.png)
+![png](https://github.com/jflores31297/portfolio/blob/main/assets/output_27_0.png?raw=true)
     
 
 
@@ -1199,7 +1212,7 @@ plt.show()
 
 
     
-![png](output_71_0.png)
+![png](https://github.com/jflores31297/portfolio/blob/main/assets/output_71_0.png?raw=true)
     
 
 
