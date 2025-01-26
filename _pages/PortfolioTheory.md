@@ -1,8 +1,5 @@
 ---
 layout: single
-sidebar:
-  - title: "Juan Flores"
-    image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
 ---
 
 ![Project Cover Image](https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true)
