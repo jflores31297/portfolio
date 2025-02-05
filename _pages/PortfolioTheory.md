@@ -2,6 +2,7 @@
 layout: single
 classes: wide
 toc: true
+toc_label: "Table of Contents"
 sidebar:
   - title: "Juan Flores"
     image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
@@ -16,7 +17,7 @@ sidebar:
 <img src="https://github.com/jflores31297/portfolio/blob/main/assets/Project%20Cover%20Image.png?raw=true" width="900">
 
 ---
-### Building an Optimal Investment Portfolio Using Modern Portfolio Theory
+# Building an Optimal Investment Portfolio Using Modern Portfolio Theory
 Investment portfolio management is a cornerstone of modern finance, enabling individuals and institutions to allocate assets effectively to maximize returns while minimizing risk. This project, “Portfolio Optimization with Python,” leverages advanced computational tools and Modern Portfolio Theory (MPT) to analyze and construct optimal portfolios. By integrating Python’s powerful libraries and the principles of MPT, this program provides a robust framework for investors to make data-driven decisions.
 
 The program begins by gathering historical market data using the yfinance library, focusing on key assets such as Fidelity ZERO International Index Fund (FZILX), Fidelity ZERO Total Market Index Fund (FZROX), and Fidelity U.S. Bond Index Fund (FXNAX). Through this data, the program calculates critical financial metrics, including daily returns, expected annual returns, and an annualized covariance matrix, to quantify asset performance and interdependencies.
@@ -642,7 +643,7 @@ plt.show()
 ---
 # Display parameters of optimal portfolios
 
-### Max Sharpe Ratio
+## Max Sharpe Ratio
 This step extracts and displays the optimal weights of the assets for the maximum Sharpe ratio portfolio, which represents the portfolio that offers the best risk-adjusted return. Additionally, it prints the key performance metrics for this optimal portfolio, including the expected return, volatility, and Sharpe ratio.
 
 The optimal weights help investors understand how to allocate capital among the different assets to achieve the best risk-adjusted return, while the performance metrics provide insights into how the portfolio is expected to perform in terms of return and risk.
@@ -758,7 +759,7 @@ print(f"Sharpe Ratio: {results[2, max_sharpe_idx]:.4f}\n")
     	- Displays the Sharpe ratio of the portfolio with the maximum Sharpe ratio.
  
 
-### Minimum Volatility
+## Minimum Volatility
 This part of the code is similar to the previous one, but it focuses on the portfolio with the minimum volatility rather than the maximum Sharpe ratio. The min_vol_portfolio DataFrame provides the optimal allocation of assets for the least risky portfolio, while the performance metrics display the expected return, volatility (risk), and Sharpe ratio.
 
 The minimum volatility portfolio is ideal for investors who prioritize reducing risk over maximizing return. It provides the least volatile combination of assets, which might appeal to risk-averse investors seeking stability in their investments.
