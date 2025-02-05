@@ -3,10 +3,6 @@ layout: single
 classes: wide
 toc: true
 toc_label: "Table of Contents"
-sidebar:
-  - title: "Juan Flores"
-    image: https://github.com/jflores31297/portfolio/blob/main/assets/portrait.png?raw=true
-    text: "Data Scientist"   
 ---
 
 <script type="text/javascript" async
