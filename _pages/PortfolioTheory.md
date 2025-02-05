@@ -1,6 +1,5 @@
 ---
 layout: single
-classes: wide
 toc: true
 toc_label: "Table of Contents"
 ---
