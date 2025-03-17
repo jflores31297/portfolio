@@ -4,6 +4,6 @@ plugins:
 - jekyll-include-cache
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-logo: "https://github.com/jflores31297/portfolio/blob/main/assets/Logo.png?raw=true"
+logo: "https://github.com/jflores31297/portfolio/blob/main/assets/ICON.png?raw=true"
 include: ["_pages"]
 layout: single  
