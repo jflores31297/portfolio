@@ -1,3 +1,9 @@
+---
+layout: single
+toc: true
+toc_label: "Table of Contents"
+---
+
 <img src="https://github.com/jflores31297/portfolio/blob/main/assets/RealEstateDB-Cover.png?raw=true" width="900">
 
 # Real Estate Management CLI with Advanced Analytics
