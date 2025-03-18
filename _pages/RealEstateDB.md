@@ -25,15 +25,19 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 
 ---
 
-## **Features**
+# **Features**
 
 ### Database Design:
 ![ERD](https://github.com/jflores31297/portfolio/blob/main/assets/ERD.png?raw=true)
 
 ### **Core CRUD Operations**
 - [▶️ CRUD Operations Demo](https://www.loom.com/share/f82c02702b344e7ca52bc4798e7421ff?sid=48414b6f-3f69-4d19-a24c-4ee4b39b280c){: .btn .btn--info}
-- Manage **properties, owners, tenants, leases, payments, and maintenance requests**.
-- Input validation for dates, emails, phone numbers, and ownership percentages.
+- CRUD operations were implemented using MySQL queries executed through Python’s MySQL connector.
+    - Create (C): New records (e.g., tenants, properties, leases, maintenance requests) are added using INSERT statements.
+    - Read (R): Data retrieval is done via SELECT queries, including advanced analytics like ranking and aggregation. Pagination is integrated to handle large datasets efficiently.
+	- Update (U): Records are modified using UPDATE statements, allowing changes to lease statuses, maintenance request progress, and tenant details.
+	- Delete (D): DELETE statements are used to remove records, ensuring referential integrity by checking dependencies before deletion.
+- The CLI provides a user-friendly interface for executing these operations, with error handling and confirmation prompts to prevent unintended modifications. 
 - **Example**:
     
     ```python
