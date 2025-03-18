@@ -7,8 +7,7 @@ classes: wide
 
 # Real Estate Management CLI with Advanced Analytics
 *Python + MySQL | Terminal-Based Property Management System*
-
-### **Overview**
+## **Overview**
 
 A command-line interface (CLI) tool for managing real estate portfolios, featuring **CRUD operations** and **advanced SQL analytics**. Built to streamline property management tasks like lease tracking, maintenance prioritization, and investment performance analysis.
 
@@ -26,13 +25,13 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 
 ---
 
-### **Features**
+## **Features**
 
 ### Database Design:
 ![ERD](https://github.com/jflores31297/portfolio/blob/main/assets/ERD.png?raw=true)
 
 ### **Core CRUD Operations**
-[CRUD Operations Demo](https://www.loom.com/share/f82c02702b344e7ca52bc4798e7421ff?sid=48414b6f-3f69-4d19-a24c-4ee4b39b280c){: .btn .btn--info}
+- [▶️ CRUD Operations Demo](https://www.loom.com/share/f82c02702b344e7ca52bc4798e7421ff?sid=48414b6f-3f69-4d19-a24c-4ee4b39b280c){: .btn .btn--info}
 - Manage **properties, owners, tenants, leases, payments, and maintenance requests**.
 - Input validation for dates, emails, phone numbers, and ownership percentages.
 - **Example**:
@@ -46,7 +45,7 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
     
 
 ### **Advanced Analytics Submenu**
-[Advanced Analytics Demo](https://www.loom.com/share/f31faebb3b6749008fd29051bdcbaf61?sid=f1cf33ff-a85d-45d9-bb54-6b7bdd71d125){: .btn .btn--info}
+- [▶️ Advanced Analytics Demo](https://www.loom.com/share/f31faebb3b6749008fd29051bdcbaf61?sid=f1cf33ff-a85d-45d9-bb54-6b7bdd71d125){: .btn .btn--info}
 - **5 Key Queries** (with easy expandability):
     - **Oldest Open Maintenance Requests**: Prioritize urgent repairs.
     - **Running Payment Totals**: Track tenant payment history.
@@ -71,7 +70,7 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 
 ### **Code & Tools**
 
-- [GitHub Repo](https://github.com/jflores31297/RealEstateDB.git){: .btn .btn--info}
+[📂 GitHub Repo](https://github.com/jflores31297/RealEstateDB.git){: .btn .btn--info}
 - **Key Files**:
     - `real_estate_crud.py`: Python CLI code.
     - `PropertyManagementDB.sql`: Database schema and sample data.
