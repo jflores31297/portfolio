@@ -53,7 +53,7 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
     - **Rent Yield Calculation**: Evaluate ROI per property.
     - **Maintenance Request Rankings**: Allocate resources efficiently.
     - **Owner Portfolio Valuation**: Assess investor equity.
-- **Technical Highlight**:
+- **Example**:
     
     ```sql
     -- Portfolio Value Calculation
@@ -67,25 +67,13 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
     
     ```
     
-
----
-
-### **Visuals**
-
-1. **CLI Screenshots**:
-    - Showcase the main menu, CRUD workflows, and query results.
-    - Example: Paginated rent yield results or maintenance rankings.
-2. **Query Output**:
-    - Before/After examples (e.g., raw data vs. formatted tables with `tabulate`).
-
 ---
 
 ### **Code & Tools**
 
-- **GitHub Repo**: Link to the full codebase with a detailed `README.md`.
+- [GitHub Repo](https://github.com/jflores31297/RealEstateDB.git){: .btn .btn--info}
 - **Key Files**:
-    - `real_estate_crud.py`: Core CRUD logic.
-    - `advanced_queries.py`: Analytics functions.
+    - `real_estate_crud.py`: Python CLI code.
     - `PropertyManagementDB.sql`: Database schema and sample data.
 
 ---
