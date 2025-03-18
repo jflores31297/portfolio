@@ -109,7 +109,7 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 	4. Maintenance Request Rankings: Ranks properties based on the number of open maintenance requests, helping managers allocate resources efficiently and focus on properties with the most urgent repair needs.
 	5. Owner Portfolio Valuation: Calculates the total property investment value for each owner based on ownership shares, allowing investors to assess their real estate holdings and make informed financial decisions.
 	- Each query provides actionable insights for property managers, investors, and landlords, improving decision-making and operational efficiency.
-- **Example:** Rank Properties by Open Maintenance Requests
+- **Example 1:** Rank Properties by Open Maintenance Requests
 	```python
 	def rank_properties_by_open_requests(conn, page_size=5):
 	    """
@@ -180,7 +180,9 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
  - **Output:**
 <img src="https://github.com/jflores31297/portfolio/blob/main/assets/RankByMaintenanceReq.png?raw=true" width="900">
 
-- **Example:** Calculate Each Owner's Portfolio Value
+---
+
+- **Example 2:** Calculate Each Owner's Portfolio Value
 	```python
 	def calculate_owner_portfolio_value(conn, page_size=5):
 	    """
@@ -264,23 +266,24 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 
 ### **Challenges & Solutions**
 
-1. **Database Optimization**:
-    - **Problem**: Slow query performance with large datasets.
-    - **Solution**: Added indexes on `property_id`, `status`, and `payment_date`.
-2. **User Input Validation**:
-    - **Problem**: Handling incorrect date/phone formats.
-    - **Solution**: Regex validation and custom error messages.
-3. **Scalability**:
-    - **Problem**: Expanding the menu for new features.
-    - **Solution**: Modular design with a dictionary-driven menu system.
+1. **Database Optimization:**
+	- Problem: As the dataset grew, queries became slower, especially when retrieving maintenance requests, payments, or rent yield calculations.
+	- Solution: Indexes were added on property_id, status, and payment_date, significantly improving query execution times by reducing the number of rows scanned.
+2. **User Input Validation:**
+	- Problem: Users occasionally entered incorrect date formats (e.g., MM/DD/YYYY instead of YYYY-MM-DD) or invalid phone numbers.
+	- Solution: Implemented regular expressions (regex) to enforce correct formats, along with custom error messages to guide users in entering valid data. This prevented database errors and improved data integrity.
+3. **Scalability:**
+	- Problem: As new features were added, the CLI menu became harder to manage and needed a more flexible way to expand.
+	- Solution: A modular, dictionary-driven menu system was introduced, allowing new features to be added without modifying core logic. This made the system more maintainable and scalable.
 
 ---
 
 ### **Future Enhancements**
+- **Filtering/Sorting:** Implementing filtering options (e.g., by date range, status, or tenant) and sorting functionalities (e.g., by rent yield, payment amount, or maintenance priority) would improve data usability and allow users to find relevant information faster.
+- **Web Interface:** Migrating the CLI to a Flask or Django-based web dashboard would make the application more accessible, allowing users to interact with the system via a user-friendly interface rather than command-line inputs.
+- **Automated Reports:** Adding functionality to export query results as PDF or Excel reports would enable property managers and investors to generate, share, and store structured financial and maintenance reports for better record-keeping and decision-making.
 
-- **Filtering/Sorting**: Let users filter results by date range or sort columns.
-- **Web Interface**: Migrate to a Flask/Django dashboard for broader accessibility.
-- **Automated Reports**: Generate PDF/Excel reports from query results.
+- These enhancements would significantly improve the application’s usability, accessibility, and efficiency for property management tasks.
 
 ---
 
