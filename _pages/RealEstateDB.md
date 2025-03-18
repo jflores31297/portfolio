@@ -38,69 +38,66 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 	- Update (U): Records are modified using UPDATE statements, allowing changes to lease statuses, maintenance request progress, and tenant details.
 	- Delete (D): DELETE statements are used to remove records, ensuring referential integrity by checking dependencies before deletion.
 - The CLI provides a user-friendly interface for executing these operations, with error handling and confirmation prompts to prevent unintended modifications. 
-- **Example**:
-    
+- **Example: Display (Read) All Owner Records**
+
 	```python
-	# Function to read and display all properties from the database
-	def read_properties(cursor):
+	# Function to view all owners with pagination
+	def read_owners(cursor, page_size=10):
 	    """
-	    Retrieve and display all properties from the database in a formatted table with error handling.
+	    Retrieve and display all owners in a formatted table with pagination and error handling.
 	
 	    :param cursor: MySQL database cursor used to execute queries.
+	    :param page_size: Number of records to display per page (default: 10).
 	    """
 	    try:
-		# Execute SQL query to select relevant property details, ordered by property_id for consistency
-		cursor.execute("""
-		    SELECT 
-			property_id, address, city, state, zip_code,
-			property_type, square_feet, year_built,
-			purchase_date, purchase_price
-		    FROM Property
-		    ORDER BY property_id
-		""")
+	        # Execute SQL query to fetch all owner records, ordered by owner_id
+	        cursor.execute("SELECT * FROM Owner ORDER BY owner_id")
+	        owners = cursor.fetchall()  # Fetch all records from the query result
 	
-		# Fetch all records from the query result
-		properties = cursor.fetchall()
+	        # Check if the Owner table has any records
+	        if not owners:
+	            print("\nNo owners found.")
+	            return  # Exit the function if no records exist
 	
-		# Check if the database returned any properties
-		if not properties:
-		    print("\nNo properties found in the database.")  # Inform the user if no records exist
-		    return  # Exit the function if no properties are found
+	        # Convert fetched records into a formatted list of dictionaries for better readability
+	        formatted_owners = []
+	        for owner in owners:
+	            formatted_owner = {
+	                "ID": owner[0],  # Owner ID
+	                "First Name": owner[1],  # Owner's first name
+	                "Last Name": owner[2],  # Owner's last name
+	                "Email": owner[3],  # Email address
+	                "Phone": owner[4] or "N/A",  # Handle NULL values by replacing with "N/A"
+	                "Address": owner[5] or "N/A"  # Handle NULL values by replacing with "N/A"
+	            }
+	            formatted_owners.append(formatted_owner)
 	
-		# Initialize an empty list to store formatted property data
-		formatted_properties = []
+	        # Initialize pagination variables
+	        total_owners = len(formatted_owners)  # Total number of owner records
+	        start_index = 0  # Start index for displaying records
 	
-		# Loop through each property record and format the data for better readability
-		for prop in properties:
-		    formatted_prop = {
-			"ID": prop[0],  # Property ID
-			"Address": prop[1],  # Street address
-			"City": prop[2],  # City name
-			"State": prop[3],  # State abbreviation
-			"ZIP": prop[4],  # ZIP code
-			"Type": prop[5],  # Property type (e.g., Single Family, Condo)
-			"Sq Ft": f"{prop[6]:,}" if prop[6] else "N/A",  # Format square feet with commas, or show "N/A" if None
-			"Year Built": prop[7] or "N/A",  # Display year built, or "N/A" if not available
-			"Purchase Date": prop[8].strftime("%Y-%m-%d") if prop[8] else "N/A",  # Format date or show "N/A"
-			"Price": f"${prop[9]:,.2f}" if prop[9] else "N/A"  # Format purchase price with thousands separator
-		    }
-		    formatted_properties.append(formatted_prop)  # Add formatted dictionary to the list
+	        # Paginate through the results
+	        while start_index < total_owners:
+	            # Display a subset of owners as per the page size
+	            print("\nOwner Records:")
+	            print(tabulate(formatted_owners[start_index:start_index + page_size], headers="keys", tablefmt="grid", stralign="left"))
+	            print(f"\nDisplaying {start_index + 1} to {min(start_index + page_size, total_owners)} of {total_owners} owners.")
 	
-		# Print property listings in a tabular format using the tabulate library
-		print("\nProperty Listings")  # Section header
-		print(tabulate(formatted_properties, headers="keys", tablefmt="grid", stralign="left"))  # Generate a grid table
-		print(f"\nTotal properties: {len(properties)}")  # Display total number of properties retrieved
+	            # Check if there are more records to display
+	            if start_index + page_size < total_owners:
+	                # Prompt user to continue or quit pagination
+	                next_page = input("\nPress Enter to view the next page or 'q' to quit: ").strip().lower()
+	                if next_page == 'q':  # If user enters 'q', exit pagination loop
+	                    break
+	            start_index += page_size  # Move to the next page
 	
-	    # Handle MySQL database errors
-	    except Error as e:
-		print(f"\nDatabase error: {e}")  # Print database-related errors
-	
-	    # Handle any unexpected errors
-	    except Exception as e:
-		print(f"\nUnexpected error: {e}")  # Print general errors for debugging
-	
+	    except Error as e:  # Handle database-related errors
+	        print(f"\nDatabase error: {e}")
+	    except Exception as e:  # Handle any unexpected errors
+	        print(f"\nAn unexpected error occurred: {e}")
 	```
-
+- **Output:**
+- ![CRUD Output Screenshot](assets/CRUD Output Screenshot.png)
     
 
 ### **Advanced Analytics Submenu**
