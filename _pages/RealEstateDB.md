@@ -103,11 +103,12 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 ### **Advanced Analytics Submenu**
 - [▶️ Advanced Analytics Demo](https://www.loom.com/share/f31faebb3b6749008fd29051bdcbaf61?sid=f1cf33ff-a85d-45d9-bb54-6b7bdd71d125){: .btn .btn--info}
 - **5 Key Queries** (with easy expandability):
-    - **Oldest Open Maintenance Requests**: Prioritize urgent repairs.
-    - **Running Payment Totals**: Track tenant payment history.
-    - **Rent Yield Calculation**: Evaluate ROI per property.
-    - **Maintenance Request Rankings**: Allocate resources efficiently.
-    - **Owner Portfolio Valuation**: Assess investor equity.
+	1. Oldest Open Maintenance Requests: This query identifies the longest unresolved maintenance requests for each property, helping property managers prioritize urgent repairs and ensure tenant satisfaction.
+	2. Running Payment Totals: Tracks cumulative tenant payments over time, allowing landlords to monitor rent payments, detect late payments, and analyze tenant payment behavior.
+	3. Rent Yield Calculation: Computes the annual rental yield for each property, a key metric for assessing return on investment (ROI) and guiding investment decisions.
+	4. Maintenance Request Rankings: Ranks properties based on the number of open maintenance requests, helping managers allocate resources efficiently and focus on properties with the most urgent repair needs.
+	5. Owner Portfolio Valuation: Calculates the total property investment value for each owner based on ownership shares, allowing investors to assess their real estate holdings and make informed financial decisions.
+	- Each query provides actionable insights for property managers, investors, and landlords, improving decision-making and operational efficiency.
 - **Example:** Rank Properties by Open Maintenance Requests
 	```python
 	def rank_properties_by_open_requests(conn, page_size=5):
