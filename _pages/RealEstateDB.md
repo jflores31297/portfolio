@@ -97,7 +97,7 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 	        print(f"\nAn unexpected error occurred: {e}")
 	```
 - **Output:**
-- ![CRUD Output Screenshot](assets/CRUD Output Screenshot.png)
+![CRUD Output Screenshot](assets/CRUD Output Screenshot.png)
     
 
 ### **Advanced Analytics Submenu**
