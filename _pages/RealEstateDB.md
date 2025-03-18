@@ -38,7 +38,7 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 	- Update (U): Records are modified using UPDATE statements, allowing changes to lease statuses, maintenance request progress, and tenant details.
 	- Delete (D): DELETE statements are used to remove records, ensuring referential integrity by checking dependencies before deletion.
 - The CLI provides a user-friendly interface for executing these operations, with error handling and confirmation prompts to prevent unintended modifications. 
-- **Example: Display (Read) All Owner Records**
+- **Example:** Display (Read) All Owner Records
 
 	```python
 	# Function to view all owners with pagination
@@ -97,7 +97,7 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 	        print(f"\nAn unexpected error occurred: {e}")
 	```
 - **Output:**
-![CRUD Output Screenshot](assets/CRUD Output Screenshot.png)
+<img src="https://github.com/jflores31297/portfolio/blob/main/assets/CRUD%20Output%20Screenshot.png?raw=true" width="900">
     
 
 ### **Advanced Analytics Submenu**
