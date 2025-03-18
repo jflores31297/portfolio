@@ -35,6 +35,9 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 
 ### **Features**
 
+### Database Design:
+![ERD](https://github.com/jflores31297/portfolio/blob/main/assets/ERD.png?raw=true)
+
 ### **1. Core CRUD Operations**
 
 - Manage **properties, owners, tenants, leases, payments, and maintenance requests**.
@@ -79,9 +82,7 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 1. **CLI Screenshots**:
     - Showcase the main menu, CRUD workflows, and query results.
     - Example: Paginated rent yield results or maintenance rankings.
-2. **ER Diagram**:
-    - Highlight the MySQL database schema (tables like `Property`, `Lease`, `MaintenanceRequest`).
-3. **Query Output**:
+2. **Query Output**:
     - Before/After examples (e.g., raw data vs. formatted tables with `tabulate`).
 
 ---
