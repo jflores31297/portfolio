@@ -70,7 +70,7 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
 
 ### **Code & Tools**
 
-[📂 GitHub Repo](https://github.com/jflores31297/RealEstateDB.git){: .btn .btn--info}
+- [📂 GitHub Repo](https://github.com/jflores31297/RealEstateDB.git){: .btn .btn--info}
 - **Key Files**:
     - `real_estate_crud.py`: Python CLI code.
     - `PropertyManagementDB.sql`: Database schema and sample data.
