@@ -108,20 +108,148 @@ A command-line interface (CLI) tool for managing real estate portfolios, featuri
     - **Rent Yield Calculation**: Evaluate ROI per property.
     - **Maintenance Request Rankings**: Allocate resources efficiently.
     - **Owner Portfolio Valuation**: Assess investor equity.
-- **Example**:
-    
-    ```sql
-    -- Portfolio Value Calculation
-    SELECT
-      o.owner_id,
-      SUM(p.purchase_price * (po.ownership_percentage / 100)) AS portfolio_value
-    FROM PropertyOwner po
-    JOIN Owner o ON po.owner_id = o.owner_id
-    JOIN Property p ON po.property_id = p.property_id
-    GROUP BY o.owner_id;
-    
-    ```
-    
+- **Example:** Rank Properties by Open Maintenance Requests
+	```python
+	def rank_properties_by_open_requests(conn, page_size=5):
+	    """
+	    Retrieves and displays properties ranked by the number of open maintenance requests with pagination.
+	
+	    :param conn: Database connection object.
+	    :param page_size: Number of records per page (default is 5).
+	    """
+	    query = """
+	    WITH RankedRequests AS (
+	        SELECT
+	            p.address,
+	            COUNT(mr.request_id) AS open_requests,
+	            RANK() OVER (ORDER BY COUNT(mr.request_id) DESC) AS request_rank
+	        FROM MaintenanceRequest mr
+	        JOIN Property p ON mr.property_id = p.property_id
+	        WHERE mr.status = 'Open'
+	        GROUP BY p.property_id, p.address
+	    )
+	    SELECT * FROM RankedRequests LIMIT %s OFFSET %s;
+	    """
+	
+	    try:
+	        cursor = conn.cursor()
+	        page = 0  # Start at page 0
+	
+	        while True:
+	            offset = page * page_size
+	            cursor.execute(query, (page_size, offset))
+	            results = cursor.fetchall()
+	
+	            if not results and page == 0:
+	                print("\n✅ No open maintenance requests found.")
+	                break
+	
+	            if not results:
+	                print("\n⚠️ No more records available.")
+	                page -= 1  # Prevents moving beyond available pages
+	                continue
+	
+	            print(f"\n🏠 Properties Ranked by Open Maintenance Requests (Page {page + 1}):")
+	            print("Rank | Address                        | Open Requests")
+	            print("-" * 70)
+	
+	            for row in results:
+	                print(f"{row[2]:<4} | {row[0]:<30} | {row[1]:>5}")
+	
+	            # Pagination options
+	            print("\n📖 Navigation: [N] Next Page | [P] Previous Page | [Q] Quit")
+	            choice = input("Select an option: ").strip().lower()
+	
+	            if choice == "n":
+	                page += 1
+	            elif choice == "p" and page > 0:
+	                page -= 1
+	            elif choice == "q":
+	                print("Returning to Advanced Queries menu...")
+	                break
+	            else:
+	                print("❌ Invalid option. Please try again.")
+	
+	    except mysql.connector.Error as e:
+	        print(f"❌ Database error: {e}")
+	
+	    finally:
+	        cursor.close()
+	```
+ - **Output:**
+<img src="https://github.com/jflores31297/portfolio/blob/main/assets/RankByMaintenanceReq.png?raw=true" width="900">
+
+- **Example:** Calculate Each Owner's Portfolio Value
+	```python
+	def calculate_owner_portfolio_value(conn, page_size=5):
+	    """
+	    Retrieves and displays each owner's total portfolio value with pagination.
+	
+	    :param conn: Database connection object.
+	    :param page_size: Number of records per page (default is 5).
+	    """
+	    query = """
+	    SELECT
+	        o.owner_id,
+	        CONCAT(o.first_name, ' ', o.last_name) AS owner_name,
+	        SUM(p.purchase_price * (po.ownership_percentage / 100)) AS portfolio_value
+	    FROM PropertyOwner po
+	    JOIN Owner o ON po.owner_id = o.owner_id
+	    JOIN Property p ON po.property_id = p.property_id
+	    GROUP BY o.owner_id
+	    ORDER BY portfolio_value DESC
+	    LIMIT %s OFFSET %s;
+	    """
+	
+	    try:
+	        cursor = conn.cursor()
+	        page = 0  # Start at page 0
+	
+	        while True:
+	            offset = page * page_size
+	            cursor.execute(query, (page_size, offset))
+	            results = cursor.fetchall()
+	
+	            if not results and page == 0:
+	                print("\n✅ No owner portfolio data available.")
+	                break
+	
+	            if not results:
+	                print("\n⚠️ No more records available.")
+	                page -= 1  # Prevents moving beyond available pages
+	                continue
+	
+	            print(f"\n🏠 Owner Portfolio Values (Page {page + 1}):")
+	            print("Owner ID | Owner Name          | Portfolio Value ($)")
+	            print("-" * 60)
+	
+	            for row in results:
+	                print(f"{row[0]:<8} | {row[1]:<20} | ${row[2]:,.2f}")
+	
+	            # Pagination options
+	            print("\n📖 Navigation: [N] Next Page | [P] Previous Page | [Q] Quit")
+	            choice = input("Select an option: ").strip().lower()
+	
+	            if choice == "n":
+	                page += 1
+	            elif choice == "p" and page > 0:
+	                page -= 1
+	            elif choice == "q":
+	                print("Returning to Advanced Queries menu...")
+	                break
+	            else:
+	                print("❌ Invalid option. Please try again.")
+	
+	    except mysql.connector.Error as e:
+	        print(f"❌ Database error: {e}")
+	
+	    finally:
+	        cursor.close()
+	
+	```
+- **Output:**
+<img src="https://github.com/jflores31297/portfolio/blob/main/assets/OwnerPortofolioValue.png?raw=true" width="900">
+         
 ---
 
 ### **Code & Tools**
