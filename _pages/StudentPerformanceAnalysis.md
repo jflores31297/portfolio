@@ -5,7 +5,7 @@ toc_label: "Table of Contents"
 ---
 ![png](https://github.com/jflores31297/portfolio/blob/main/assets/StudentPerformanceAnalysis/StudentPerformanceAnalysis.png?raw=true)
 # Student Performance Analysis
-[You can access the full Python notebook here.](https://github.com/jflores31297/StudentPerformanceAnalysis)
+You can access the full Python notebook [here](https://github.com/jflores31297/StudentPerformanceAnalysis).
 
 ## **1. Introduction**
 Academic performance is a multifaceted outcome influenced by a dynamic interplay of personal habits, environmental factors, and socio-demographic characteristics. As educational institutions increasingly recognize the importance of holistic student development, understanding how lifestyle choices—such as study routines, sleep patterns, digital consumption, physical activity, and mental well-being—affect learning outcomes becomes critical. This report presents a comprehensive analysis of these relationships using a simulated dataset of 1,000 student records, encompassing over 15 variables spanning behavioral, psychological, and contextual domains.
