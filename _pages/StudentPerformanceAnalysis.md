@@ -1,4 +1,4 @@
-# Final Report
+# Student Performance Analysis
 
 ## **1. Introduction**
 
@@ -91,7 +91,7 @@ These steps helped create a clean, analysis-ready dataset suitable for hypothesi
 
 **Histograms**
 
-![Screenshot 2025-06-01 at 6.49.48 PM.png](Final%20Report%20202509a087318042b4e7d1057e99aed1/Screenshot_2025-06-01_at_6.49.48_PM.png)
+![png](https://github.com/jflores31297/portfolio/blob/main/assets/StudentPerformanceAnalysis/01.png?raw=true)
 
 **Count plots**
 
