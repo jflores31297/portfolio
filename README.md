@@ -4,6 +4,8 @@
 ---
 ## Projects
 [**Student Performance Analysis**](_pages/StudentPerformanceAnalysis.md)
+This project involved a comprehensive statistical analysis of factors influencing student exam performance. Using a simulated dataset, I explored the impact of various lifestyle and demographic variables—including mental health, study habits, sleep, internet usage, and parental background—on academic outcomes.
+Tools Used: Python (Pandas, SciPy, Statsmodels, Seaborn), Statistical Hypothesis Testing, Data Cleaning, Data Visualization
 
 ![RealEstateDB-Cover](https://github.com/jflores31297/portfolio/blob/main/assets/RealEstateDB-Cover.png?raw=true)
 [**Real Estate Property Management with Advanced Analytics**](_pages/RealEstateDB.md)
