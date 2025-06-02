@@ -95,21 +95,21 @@ These steps helped create a clean, analysis-ready dataset suitable for hypothesi
 
 **Count plots**
 
-![Screenshot 2025-05-30 at 12.17.11 AM.png](Final%20Report%20202509a087318042b4e7d1057e99aed1/Screenshot_2025-05-30_at_12.17.11_AM.png)
+![png](https://github.com/jflores31297/portfolio/blob/main/assets/StudentPerformanceAnalysis/02.png?raw=true)
 
 ### **Relationship with Exam Score**
 
 **Scatter plots:**
 
-![Screenshot 2025-05-30 at 12.18.18 AM.png](Final%20Report%20202509a087318042b4e7d1057e99aed1/Screenshot_2025-05-30_at_12.18.18_AM.png)
+![png](https://github.com/jflores31297/portfolio/blob/main/assets/StudentPerformanceAnalysis/03.png?raw=true)
 
 **Boxplots:**
 
-![Screenshot 2025-06-01 at 6.51.21 PM.png](Final%20Report%20202509a087318042b4e7d1057e99aed1/Screenshot_2025-06-01_at_6.51.21_PM.png)
+![png](https://github.com/jflores31297/portfolio/blob/main/assets/StudentPerformanceAnalysis/04.png?raw=true)
 
 **Correlation matrix heatmap:**
 
-![CorrelationMatrix.png](Final%20Report%20202509a087318042b4e7d1057e99aed1/CorrelationMatrix.png)
+![png](https://github.com/jflores31297/portfolio/blob/main/assets/StudentPerformanceAnalysis/05.png?raw=true)
 
 ---
 
