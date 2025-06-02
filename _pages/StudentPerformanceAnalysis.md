@@ -7,10 +7,31 @@ toc_label: "Table of Contents"
 # Student Performance Analysis
 
 ## **1. Introduction**
+Academic performance is a multifaceted outcome influenced by a dynamic interplay of personal habits, environmental factors, and socio-demographic characteristics. As educational institutions increasingly recognize the importance of holistic student development, understanding how lifestyle choices—such as study routines, sleep patterns, digital consumption, physical activity, and mental well-being—affect learning outcomes becomes critical. This report presents a comprehensive analysis of these relationships using a simulated dataset of 1,000 student records, encompassing over 15 variables spanning behavioral, psychological, and contextual domains.
 
-The purpose of this analysis is to investigate the factors associated with students’ academic performance, as measured by their exam scores. Specifically, the analysis examines whether exam performance differs based on categorical lifestyle and demographic factors such as part-time job status, diet quality, exercise frequency, and internet quality. Additionally, it explores potential linear relationships between exam scores and continuous variables including age, study hours, sleep duration, and media consumption.
+The primary objective of this study is to identify key predictors of academic success, operationalized through final exam scores, and to quantify their impact. By leveraging rigorous statistical methods—including correlation analyses, t-tests, ANOVA, and non-parametric alternatives—we examine hypotheses related to:
 
-To ensure valid statistical conclusions, assumption checks were conducted for each hypothesis test, and both parametric and non-parametric methods were employed as appropriate. Where overall group differences were detected, post hoc tests were used to identify which specific group comparisons were significant.
+- The influence of **study habits** and **attendance** on performance,
+- The role of **mental health**, **sleep**, and **physical activity** in cognitive functioning,
+- The effects of **digital distractions** (social media, streaming) and **part-time employment** on academic focus,
+- The relevance of **socio-demographic factors** (e.g., gender, parental education) and lifestyle choices (e.g., diet, internet quality).
+
+Our dataset captures diverse student profiles (ages 17–24) with metrics such as daily study hours, sleep duration, self-rated mental health, exercise frequency, and extracurricular engagement. Preprocessing ensured robustness, including handling missing data via exclusion and encoding categorical variables for analysis.
+
+**Preliminary Insights**
+
+Initial findings reveal that while some factors (e.g., gender, part-time jobs) show negligible effects, others demonstrate significant associations:
+
+- Study hours exhibit the strongest positive correlation with exam scores, reinforcing the centrality of dedicated learning time.
+- Mental health and sleep duration emerge as meaningful contributors to performance.
+- Frequent exercise, particularly at high intensity, correlates with improved outcomes.
+- Conversely, excessive social media and streaming hours impose small but consistent penalties on achievement.
+
+This report details our methodology, validates findings through statistical testing, and culminates in evidence-based recommendations for students and educators. Subsequent sections outline data characteristics (Section 2), preprocessing steps (Section 3), exploratory visualizations (Section 4), statistical results (Section 5), and strategic implications (Section 6). By synthesizing these insights, we aim to empower stakeholders with actionable strategies to enhance academic success through targeted lifestyle interventions.
+
+---
+
+**Key Terms**: Academic Performance, Lifestyle Habits, Statistical Analysis, Correlation, Predictive Factors, Student Well-being.
 
 ---
 
