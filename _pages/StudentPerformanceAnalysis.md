@@ -1,3 +1,9 @@
+---
+layout: single
+toc: true
+toc_label: "Table of Contents"
+---
+
 # Student Performance Analysis
 
 ## **1. Introduction**
